@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Software Engineering - Career Discovery Day 2018</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Software Engineering</h1>
+          <hr/>
+          <div class="row">
+            <div class="col-8">
+              <h2>Scott Olson</h2>
+              <h3>WEM - Career Day 2018</h3>
+            </div>
+            <div class="col-4">
+              <img src="images/demonstration-of-while-loop.gif"/>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Overview</h2>
+          <ul>
+            <li>Introduction</li>
+            <li>Why Software Engineering?</li>
+            <li>Software Development</li>
+            <li>Problem</li>
+            <li>Requirements</li>
+            <li>Design</li>
+            <li>Implementation</li>
+            <li>Code Example</li>
+            <li>Testing</li>
+            <li>Questions?</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Introduction</h2>
+          <ul>
+            <li>Scott Olson</li>
+            <li>Employed By: <a href="https://www.sportsengine.com/" target="_blank">SportsEngine</a></li>
+            <li>College: <a href="https://www.winona.edu/" target="_blank">Winona State University</a></li>
+            <li>Experience: 10 years of software development</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why Software Engineering?</h2>
+          <ul>
+            <li>Problem solving</li>
+            <li>Constantly learning</li>
+            <li>Constantly doing new things</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Software Development</h2>
+          <img src="images/software-development.jpg" alt="software development"/>
+        </section>
+        <section>
+          <h2>Problem</h2>
+          <ul>
+            <li><em>Customer:</em> Library</li>
+            <li>
+              <em>Problem:</em>
+              People keep taking our books,
+              so we don't know what books we have!
+              <ul>
+                <li>They do normally return the books after some time.</li>
+              </ul>
+          </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Requirements</h2>
+          <p>What does our software need to do?</p>
+          <ul class="fragment">
+            <li>People need to be able to check out books.</li>
+            <li>People need to be able to return books.</li>
+            <li>Keep an inventory of the books.</li>
+            <li>Need to allow multiple copies per book.</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Design</h2>
+            <p>Make an engineering plan to meet your requirements.</p>
+            <ul>
+              <li>Define workflows</li>
+              <li>Create diagrams</li>
+            </ul>
+            <img src="images/basic-flowchart.jpg" alt="basic flow chart" />
+          </section>
+          <section>
+            <h2>Design - ERD</h2>
+            <img src="images/library-erd.jpg" alt="library erd" style="height:550px;"/>
+          </section>
+        </section>
+        <section>
+          <h2>Implementation</h2>
+          <p>Bring your plan to life.</p>
+          <ul>
+            <li>Write code!</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <ul class="logos">
+                <li>C# <img src="images/c-sharp.png" alt="c sharp"/></li>
+                <li>JavaScript <img src="images/javascript.png" alt="javascript"/></li>
+                <li>Python <img src="images/python.jpg" alt="python"/></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="logos">
+                <li>Ruby on Rails <img src="images/ruby-on-rails.png" alt="ruby on rails"/></li>
+                <li>Java <img src="images/java.png" alt="java"/></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Code Example</h2>
+          <div class="row">
+            <div class="col-8">
+              <p>JavaScript</p>
+              <pre>
+                <code class="hljs lang-js" data-trim contenteditable>
+function multiply(a, b) {
+return a * b;
+}
+
+for(var a = 1; a <= 3; a++) {
+for(var b = 1; b <= 3; b++) {
+  var c = multiply(a, b);
+  console.log(`${a} * ${b} = ${c}`);
+}
+}
+console.log("Done!");
+                </code>
+              </pre>
+              <script type="text/javascript">
+                function clearOutput(outputId) {
+                  var outputElement = document.getElementById('exampleOutput1');
+                  var cloneElement = outputElement.cloneNode(false);
+                  outputElement.parentElement.replaceChild(cloneElement, outputElement);
+                }
+
+                function addOutput(outputId, text) {
+                  var outputElement = document.getElementById('exampleOutput1');
+                  var contentNode = document.createElement('div');
+                  contentNode.innerText = text;
+                  outputElement.appendChild(contentNode);
+                }
+
+                function multiply(a, b) {
+                  return a * b;
+                }
+
+                function runMe() {
+                  clearOutput('exampleOutput1');
+                  for(var a = 1; a <= 3; a++) {
+                    for(var b = 1; b <= 3; b++) {
+                      var c = multiply(a, b);
+                      addOutput('exampleOutput1', `${a} * ${b} = ${c}`);
+                    }
+                  }
+                  addOutput('exampleOutput1', 'Done!');
+                }
+              </script>
+              <a href="javascript:void(0);" onclick="runMe()">Run</a>
+            </div>
+            <div class="col-4">
+              <p>Output</p>
+              <div id="exampleOutput1" class="program-output"></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Testing</h2>
+          <p>Make sure it works right.</p>
+          <ul>
+            <li>Developer testing</li>
+            <li>Automated testing</li>
+            <li>Make sure it meets the requirements</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Questions?</h2>
+          <ul>
+            <li>
+              <p>Learn - <a href="https://www.codecademy.com">https://www.codecademy.com</a></p>
+              <ul>
+                <li>There are paid courses, but also free courses which work well.</li>
+              </ul>
+            </li>
+            <li>Info - <a href="https://henrikwarne.com/2014/12/08/5-reasons-why-software-developer-is-a-great-career-choice/">https://henrikwarne.com/2014/12/08/5-reasons-why-software-developer-is-a-great-career-choice/</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
